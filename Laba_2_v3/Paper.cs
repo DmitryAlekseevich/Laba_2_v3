@@ -7,44 +7,23 @@ using System.Threading.Tasks;
 
 namespace Laba_2_v3
 {
-    class Paper
+    public class Paper
     {
-        public string Name; //Название экзамена
-        public int Evaluation; //Оценка
-        public System.DateTime DateOfExam; //Дата проведения экзамена
-        private string v;
-        private DateTime dateTime;
-
-        public Paper(string name, int eval, DateTime date)
+        public string Title { get; set; }
+        public Person Author { get; set; }
+        public DateTime PublicationDate { get; set; }
+        public Paper(string title, Person author, DateTime publicationDate)
         {
-
-            Name = name;
-            Evaluation = eval;
-            DateOfExam = date;
+            Title = title;
+            Author = author;
+            PublicationDate = publicationDate;
         }
-
         public Paper()
         {
-            Name = "Ленин был грибом??!";
-            Evaluation = 5;
-            DateOfExam = new DateTime(2022, 10, 10);
-
+            Title = "Ленин был грибом????";
+            Author = new();
+            PublicationDate = new(2009, 8, 25, 11, 12, 13);
         }
-
-        public Paper(string v, DateTime dateTime)
-        {
-            this.v = v;
-            this.dateTime = dateTime;
-        }
-
-        public string ToFullString()
-        {
-            return "Название экзамена: " + Name + "\n" +
-                "Оценка: " + Evaluation + "\n" +
-                "Дата проведения экзамена: " + DateOfExam.ToLongDateString() + "\n" + "\n";
-        }
-
-
+        public string ToFullString() => $"Полей нет, есть только свойства";
     }
-
 }

@@ -4,8 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Peredelanaya_Laba_2_3var
+namespace Laba_2_v3
 {
-    public enum TimeFrame { Год, Двагода, Долго }
+    public enum TimeFrame
+    {
+        Year,
+        TwoYears,
+        Long
+    }
 
 }
