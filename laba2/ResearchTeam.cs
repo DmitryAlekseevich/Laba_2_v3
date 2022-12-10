@@ -2,10 +2,10 @@
 
 public class ResearchTeam
 {
-    private readonly string _researchName;
-    private readonly string _organizationName;
-    private readonly int _regNumber;
-    private readonly TimeFrame _researchDuration;
+    private string _researchName;
+    private string _organizationName;
+    private int _regNumber;
+    private TimeFrame _researchDuration;
     private Paper[] _papers;
     public ResearchTeam(string researchName, string organizationName, int regNumber, TimeFrame researchDuration, Paper[] papers)
     {
@@ -17,8 +17,8 @@ public class ResearchTeam
     }
     public ResearchTeam()
     {
-        _researchName = "ЖмышенкоВаллерийАльбертович";
-        _organizationName = "ООО \"Самара\"";
+        _researchName = "Исследования Акакия";
+        _organizationName = "ООО \"АкакийЦарьГрад\"";
         _regNumber = 123456;
         _researchDuration = TimeFrame.Long;
         _papers = new Paper[3]
@@ -28,10 +28,23 @@ public class ResearchTeam
             new("Титул 3", new Person(), DateTime.Now),
         };
     }
-    public string ResearchName => _researchName;
-    public string OrganizationName => _organizationName;
-    public int RegNumber => _regNumber;
-    public TimeFrame ResearchDuration => _researchDuration;
+    //public string ResearchName => _researchName;
+    public string ResearchName 
+    {
+        get => _researchName;
+        set { 
+            _researchName = value; 
+        }
+    }
+
+    public string OrganizationName
+    {
+        get => _organizationName;
+        set => _organizationName = new(value);
+    }
+    //public string OrganizationName => _organizationName;
+    //public int RegNumber => _regNumber;
+    //public TimeFrame ResearchDuration => _researchDuration;
     public Paper[]? Papers => _papers;
     public Paper? PaperLast => _papers?.OrderBy(x => x.PublicationDate).LastOrDefault();
     public void AddPapers(params Paper[] newPapers)
@@ -49,7 +62,7 @@ public class ResearchTeam
         {
             full += $"{item.ToFullString()} \n";
         }
-        full += $"Последняя публикация вообще(не важно от какого автора):\n{PaperLast.ToFullString()}";
+        full += $"Последняя публикация вообще(НЕ КОНКРЕТНО ОТ ЭТОГО АВТОРА):\n{PaperLast.ToFullString()}";
         return full;
     }
     public string ToShortString()

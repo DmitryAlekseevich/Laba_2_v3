@@ -13,7 +13,7 @@ public class Paper
     }
     public Paper()
     {
-        Title = "Самое важное, о самом важном";
+        Title = "Дорога: путь длинною в жизнь";
         Author = new();
         PublicationDate = new(2024, 8, 25, 11, 12, 13);
     }

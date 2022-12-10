@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\pro10\\OneDrive\\Desktop\\laba2v2-main\\laba2\\laba2.csproj",
+      "projectUniqueName": "C:\\Users\\pro10\\OneDrive\\Документы\\GitHub\\Laba_2_v3\\laba2\\laba2.csproj",
       "projectName": "laba2",
-      "projectPath": "C:\\Users\\pro10\\OneDrive\\Desktop\\laba2v2-main\\laba2\\laba2.csproj",
+      "projectPath": "C:\\Users\\pro10\\OneDrive\\Документы\\GitHub\\Laba_2_v3\\laba2\\laba2.csproj",
       "packagesPath": "C:\\Users\\pro10\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\pro10\\OneDrive\\Desktop\\laba2v2-main\\laba2\\obj\\",
+      "outputPath": "C:\\Users\\pro10\\OneDrive\\Документы\\GitHub\\Laba_2_v3\\laba2\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\"
